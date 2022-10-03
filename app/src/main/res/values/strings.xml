@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Zavrsni_V3</string>
+    <string name="director">Director:</string>
+    <string name="writer">Writer:</string>
+    <string name="actors">Actors:</string>
+    <string name="circle">●</string>
+    <string name="add">ADD</string>
+    <string name="remove">REMOVE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="info">Info</string>
+    <string name="api_info">Aplikacija za svoj rad koristi OMDb API, koji predstavlja RESTful web servis za dobavljanje informacija o serijama, njihovim epizodama, kao i filmovima. Ovaj API sve informacije dobija iz IMDB baze podataka, a korisniku naše aplikacije podatke vraća u JSON formatu.</string>
+    <string name="poster_gallery">Poster Gallery</string>
+    <string name="my_watchlist">My Watchlist</string>
+    <string name="browse_movies">Browse Movies</string>
+    <string name="hint">A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family\'s future.</string>
+    <string name="crime_drama_thriller">Crime, Drama, Thriller</string>
+    <string name="length">51 min</string>
+    <string name="year">2008 - 2013</string>
+    <string name="title">Breaking Bad</string>
+    <string name="date">Sarajevo, juni 2022. godine</string>
+    <string name="course">Predmet: Razvoj mobilnih aplikacija</string>
+    <string name="department">Stručni studij - Informacione tehnologije</string>
+    <string name="faculty">Prirodno-matematički fakultet</string>
+    <string name="university">Univerzitet u Sarajevu</string>
+    <string name="demir_pasalic">Demir Pašalić</string>
+    <string name="kenan_sultanic">Kenan Sultanić</string>
+    <string name="genre">Genre</string>
+    <string name="filter_by_genre">Filter by genre:</string>
+    <string name="filter_by_year">Filter by year:</string>
+    <string name="sort_by">Sort by:</string>
+    <string name="year_filter">Year</string>
+    <string name="default_filter">Default</string>
+    <string name="apply_filters">Apply</string>
+    <string name="search">Search</string>
+    <string name="movies">Movies</string>
+    <string name="series">Series</string>
+    <string name="episode">Episode</string>
+    <string name="show_all">Show all</string>
+    <string name="search_button">Search</string>
+
+    <string-array name="Genres">
+        <item>Any</item>
+        <item>Action</item>
+        <item>Drama</item>
+        <item>Horror</item>
+        <item>Comedy</item>
+        <item>Fantasy</item>
+    </string-array>
+</resources>

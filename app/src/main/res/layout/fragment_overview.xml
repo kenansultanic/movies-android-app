@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/item_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/breaking_bad_posters_films_vibez_1628641102_1024x1024"
+                app:layout_constraintTop_toTopOf="parent"
+                android:scaleType="centerCrop" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/gradient_overlay"
+                app:layout_constraintBottom_toBottomOf="@+id/item_image">
+
+                <TextView
+                    android:id="@+id/item_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/title"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:paddingLeft="30dp"
+                    app:layout_constraintBottom_toTopOf="@+id/item_year"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/item_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/year"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:paddingLeft="30dp"
+                    android:layout_marginBottom="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/circle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/circle"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/item_year" />
+                <TextView
+                    android:id="@+id/item_runtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    android:text="@string/length"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/header"
+                android:layout_marginTop="-35dp"
+                android:layout_marginHorizontal="30dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_corner">
+                    <TextView
+                        android:id="@+id/item_genre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/crime_drama_thriller"
+                        android:textColor="@color/text"
+                        android:padding="20dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/text"/>
+                    <TextView
+                        android:id="@+id/item_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint"
+                        android:textColor="@color/text"
+                        android:padding="20dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_corner"
+                    android:padding="20dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="10dp">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/star"
+                            android:layout_marginRight="7dp"/>
+                        <TextView
+                            android:id="@+id/item_rating"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="8.7 / 10"
+                            android:textColor="@color/text"
+                            android:padding="3dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="10dp">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/language"
+                            android:layout_marginRight="7dp"/>
+                        <TextView
+                            android:id="@+id/item_language"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="English, Russian"
+                            android:textColor="@color/text"
+                            android:padding="3dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="10dp">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/award"
+                            android:layout_marginRight="7dp"/>
+                        <TextView
+                            android:id="@+id/item_awards"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Won 7 Primetime Emys, 77 wins and 216 nominations in total"
+                            android:textColor="@color/text"
+                            android:padding="3dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_corner"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/writer"
+                            android:textColor="@color/text"
+                            android:layout_marginRight="7dp"/>
+                        <TextView
+                            android:id="@+id/item_writer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Matt Duffer, Ross Duffer"
+                            android:textColor="@color/text"
+                            android:padding="3dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/actors"
+                            android:textColor="@color/text"
+                            android:layout_marginRight="7dp"/>
+                        <TextView
+                            android:id="@+id/item_actors"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Millie Bobby Brown, Finn Wolfhard, Winona Ryder"
+                            android:textColor="@color/text"
+                            android:padding="3dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <Button
+                        android:id="@+id/add_to_watchlist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add to watchlist"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/primary"
+                        android:layout_margin="5dp"
+                        android:visibility="gone"/>
+                    <Button
+                        android:id="@+id/remove_from_watchlist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Remove from watchlist"
+                        android:textColor="@color/text"
+                        android:backgroundTint="@color/white"
+                        android:layout_margin="5dp"
+                        android:visibility="gone"/>
+                    <Button
+                        android:id="@+id/suggest_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Suggest to friend"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/primary"
+                        android:layout_margin="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

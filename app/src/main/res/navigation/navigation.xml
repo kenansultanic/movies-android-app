@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/movieListFragment"
+        android:name="com.example.zavrsni_v3.ui.fragments.MovieListFragment"
+        android:label="Movies"
+        tools:layout="@layout/fragment_movie_list">
+        <action
+            android:id="@+id/action_movieListFragment_to_overviewFragment"
+            app:destination="@id/overviewFragment"
+            app:popUpToInclusive="false"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <argument
+            android:name="searchQuery"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="type"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="hasInternetAccess"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/overviewFragment"
+        android:name="com.example.zavrsni_v3.ui.fragments.OverviewFragment"
+        android:label="Overview"
+        tools:layout="@layout/fragment_overview">
+        <argument
+            android:name="imdbID"
+            app:argType="string" />
+        <argument
+            android:name="fromWatchlist"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterApiCallResultsFragment"
+        android:name="com.example.zavrsni_v3.ui.fragments.FilterApiCallResultsFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_filter_api_call_results">
+        <action
+            android:id="@+id/action_filterApiCallResultsFragment_to_movieListFragment"
+            app:destination="@id/movieListFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/watchListFragment"
+        android:name="com.example.zavrsni_v3.ui.fragments.WatchListFragment"
+        android:label="WatchList"
+        tools:layout="@layout/fragment_watchlist">
+        <action
+            android:id="@+id/action_watchListFragment_to_overviewFragment"
+            app:destination="@id/overviewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <argument
+            android:name="selectedGenre"
+            app:argType="string" />
+        <argument
+            android:name="selectedYear"
+            app:argType="string" />
+        <argument
+            android:name="sortBy"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.zavrsni_v3.ui.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeTemporary_to_filterApiCallResultsFragment"
+            app:destination="@id/filterApiCallResultsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_homeTemporary_to_movieListFragment"
+            app:destination="@id/movieListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_posterGridFragment"
+            app:destination="@id/posterGridFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_filterWatchlistFragment"
+            app:destination="@id/filterWatchlistFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.zavrsni_v3.ui.fragments.InfoFragment"
+        android:label="Info"
+        tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/posterGridFragment"
+        android:name="com.example.zavrsni_v3.ui.fragments.PosterGridFragment"
+        android:label="Poster Gallery"
+        tools:layout="@layout/poster_grid" />
+    <fragment
+        android:id="@+id/filterWatchlistFragment"
+        android:name="com.example.zavrsni_v3.ui.fragments.FilterWatchlistFragment"
+        android:label="Filter Watchlist"
+        tools:layout="@layout/fragment_filter_watchlist">
+        <action
+            android:id="@+id/action_filterWatchlistFragment_to_watchListFragment"
+            app:destination="@id/watchListFragment" />
+    </fragment>
+</navigation>
