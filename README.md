@@ -16,7 +16,7 @@ Od podataka koje API poziv vraća, oni koji se kroz aplikaciju najčešće koris
 
 # API
 
-Korišten je [OMBd API] (https://www.omdbapi.com/), koji predstavlja RESTful web servis za dohvatanje
+Korišten je [OMDb API] (https://www.omdbapi.com/), koji predstavlja RESTful web servis za dohvatanje
 informacija o medijskom sadržaju. Sam API koristi IMDB servise za dohvatanje informacija, a u našu
 aplikaciju ih proslijeđuje u JSON formatu. API pozivi na server su izvedeni koristeći GET metodu, u
 kojoj je kao obavezan parametar proslijeđen API ključ, kao i imdbID medije čije detaljne informacije
